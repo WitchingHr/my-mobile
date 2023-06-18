@@ -1,10 +1,13 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { RiCellphoneFill } from "react-icons/ri";
 
 import phone from "@/app/assets/images/phone.jpg";
+
+export const metadata = {
+  title: 'Login | MyMobile',
+  description: 'Trusted mobile network',
+}
 
 interface pageProps {}
 

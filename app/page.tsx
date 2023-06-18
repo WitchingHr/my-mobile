@@ -1,10 +1,9 @@
-import LoginPage from "./(auth)/login/page";
-import Dashboard from "./(dashboard)/dashboard/page";
-
 const Home = () => {
+  // check for user
+  // if user, redirect to dashboard
+  // if no user, redirect to login
+
   return (
-    // <LoginPage /> 
-    // <Dashboard />
     <></>
   );
 };

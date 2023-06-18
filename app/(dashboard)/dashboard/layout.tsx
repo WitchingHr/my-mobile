@@ -1,3 +1,4 @@
+import Dashboard from '@/app/components/Dashboard'
 import Footer from '@/app/components/Footer'
 import NavBar from '@/app/components/NavBar'
 
@@ -14,7 +15,9 @@ export default function DashboardLayout({
   return (
     <>
       <NavBar />
-      {children}
+      <Dashboard>
+        {children}
+      </Dashboard>
       <Footer />
     </>
   )

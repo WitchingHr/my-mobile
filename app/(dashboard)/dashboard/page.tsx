@@ -1,78 +1,22 @@
-"use client";
-
-import Card from "@/app/components/Card";
 import Link from "next/link";
 
 interface pageProps {}
 
 const Dashboard: React.FC<pageProps> = ({}) => {
+	// check for authentification
+
 	return (
-		<main className="flex flex-col gap-4 p-2">
-			<div className="flex flex-col items-start w-full sm:items-center sm:justify-between sm:flex-row">
-				<h1 className="text-2xl font-medium">Dashboard</h1>
-				<p>Welcome back, Matt</p>
+		<div className="relative h-full overflow-hidden rounded-md group">
+			<video autoPlay muted loop className="object-cover w-full h-full duration-300 transform group-hover:scale-110">
+				<source src="phone.mp4" type="video/mp4" />
+			</video>
+			<div className="absolute inset-0 transition-opacity duration-300 bg-black opacity-0 group-hover:opacity-50"></div>
+			<div className="absolute flex flex-col duration-300 opacity-0 top-2 right-4 group-hover:opacity-100">
+				<Link className="text-5xl font-medium text-right text-white transition-transform duration-300 delay-100 -translate-x-96 hover:text-[#00ff08] group-hover:translate-x-0" href="/dashboard/plans">View Plans</Link>
+				<Link className="text-5xl font-medium text-right text-white transition-transform duration-300 delay-200 -translate-x-96 hover:text-[#00ff08] group-hover:translate-x-0" href="/dashboard/bill">View Bill</Link>
+				<Link className="text-5xl font-medium text-right text-white transition-transform duration-300 delay-300 -translate-x-96 hover:text-[#00ff08] group-hover:translate-x-0" href="/dashboard/account">View Account</Link>
 			</div>
-
-			<div className="flex flex-row gap-4">
-
-        {/* cards */}
-				<div className="flex flex-col gap-4">
-					<Card title="Go paperless!" variant={"primary"}>
-						<div className="flex flex-col gap-2">
-							<hr />
-							<p>Enroll in paperless billing and save $10 a month!</p>
-							<div className="flex gap-2">
-								<button className="flex-1 text-white duration-300 rounded-md hover:bg-indigo-500">
-									Not now
-								</button>
-								<button className="flex-initial p-2 text-indigo-600 duration-300 bg-white rounded-md min-w-min hover:bg-indigo-500 hover:text-white">
-									Enroll me in paperless billing
-								</button>
-							</div>
-						</div>
-					</Card>
-					<Card
-						variant={"default"}
-						title="Your plan"
-						subtitle="View plans"
-						href="/plans"
-					>
-						<hr className="mb-2" />
-						<div className="flex items-center justify-between">
-							<div className="font-medium text-indigo-600">Max</div>
-							<div>Unlimited talk, text and 5G data</div>
-						</div>
-					</Card>
-					<Card
-						variant={"default"}
-						title="Bill"
-						subtitle="View statement"
-						href="/bill"
-					>
-						<hr className="pb-2" />
-						<div className="flex items-center justify-between">
-							<div className="font-medium text-indigo-600">$70</div>
-							<div>Due 1 April, 2023</div>
-						</div>
-					</Card>
-					<Card
-						variant={"default"}
-						title="Account"
-						subtitle="View account"
-						href="/account"
-					>
-						<hr className="pb-2" />
-						<div className="flex items-center justify-between">
-							<div className="font-medium text-indigo-600">Matt Thomas</div>
-							<div>Member since January 2023</div>
-						</div>
-					</Card>
-				</div>
-
-        {/* content */}
-        <div className="flex-1 border"></div>
-			</div>
-		</main>
+		</div>
 	);
 };
 
