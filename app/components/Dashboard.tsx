@@ -16,7 +16,7 @@ const Dashboard: React.FC<DashboardProps> = ({ children }) => {
 	const capitalizedParam = param.charAt(0).toUpperCase() + param.slice(1);
 
 	return (
-		<main className="flex flex-col gap-2 p-2 bg-[#0000003b]">
+		<main className="flex flex-col gap-2 p-2 bg-[#00000026]">
 			<div className="flex flex-col items-start w-full sm:items-center sm:justify-between sm:flex-row">
 				<div className="flex items-center gap-2 text-[#282828]">
 					<Link href="/dashboard">

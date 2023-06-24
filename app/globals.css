@@ -30,4 +30,25 @@
   .logo-shadow {
     box-shadow: inset 0px 0px 8px 0px #0000007d;
   }
+
+  .plan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+
+  .plan-button::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(315deg);
+    transition: 300ms;
+    opacity: 0;
+  }
+
+  .plan-button:hover::after {
+    opacity: 1;
+    transform: translateX(8px) rotate(315deg);
+  }
 }
