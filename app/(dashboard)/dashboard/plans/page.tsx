@@ -1,4 +1,4 @@
-import Plan from "./Plan";
+import Plan from "./components/Plan";
 
 interface pageProps {}
 

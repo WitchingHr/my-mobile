@@ -40,10 +40,10 @@ const Dashboard: React.FC<DashboardProps> = ({ children }) => {
 							<hr />
 							<p>Enroll in paperless billing and save $10 a month!</p>
 							<div className="flex gap-2">
-								<button className="flex-1 text-white duration-300 rounded-md hover:bg-indigo-500">
+								<button className="flex-1 text-white duration-300 rounded-bl-md hover:bg-indigo-500">
 									Not now
 								</button>
-								<button className="flex-initial p-2 text-indigo-600 duration-300 bg-white rounded-md min-w-min hover:bg-indigo-500 hover:text-white">
+								<button className="flex-initial p-2 text-indigo-600 duration-300 bg-white rounded-br-md min-w-min hover:bg-indigo-500 hover:text-white">
 									Enroll me in paperless billing
 								</button>
 							</div>

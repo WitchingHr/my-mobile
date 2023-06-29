@@ -20,7 +20,7 @@ const Plan: React.FC<planProps> = ({
   taxed = false,
 }) => {
   return (
-    <div className="flex flex-col bg-white border rounded-md border-slate-400">
+    <div className="flex flex-col bg-white border rounded-md border-slate-400 card-shadow">
       {/* 3rd line free */}
       <div className="flex items-center gap-2 p-2 text-sm border-b cursor-pointer bg-slate-100 border-slate-400 rounded-t-md">
         <ImPriceTag className="inline-block w-4 h-4 text-indigo-600" />
