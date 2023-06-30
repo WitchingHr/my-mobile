@@ -31,7 +31,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ menuOpen, setMenuOpen }) => {
 		<div
       ref={menuRef}
 			className={`
-        absolute right-0 z-10 top-[52px] p-2 duration-300 ease-in-out bg-white nav-shadow rounded-b-md
+        absolute right-0 z-20 top-[52px] p-2 duration-300 ease-in-out bg-white nav-shadow rounded-b-md
         ${menuOpen ? "translate-y-0" : "-translate-y-32"}
       `}
 		>

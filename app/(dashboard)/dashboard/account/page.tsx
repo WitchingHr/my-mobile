@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { IoMdSwap } from "react-icons/io";
 import { MdLibraryAdd } from "react-icons/md";
-import { HiOutlineDeviceMobile } from "react-icons/hi";
 import Line from "./components/Line";
 
 interface pageProps {}
@@ -23,7 +22,7 @@ const page: React.FC<pageProps> = ({}) => {
             <div className="text-center">Due Jul 09, 2023</div>
             <div className="text-4xl font-bold text-center text-neutral-700">$54.61</div>
             <button className="py-2 font-semibold text-white bg-indigo-600">Make a payment</button>
-            <button className="py-2 font-semibold border border-black text-neutral-700">View bill</button>
+            <Link href="/dashboard/bill" className="py-2 font-semibold text-center border border-black text-neutral-700">View bill</Link>
           </div>
           {/* i want to... */}
           <div className="flex flex-col flex-1 gap-4">
@@ -51,7 +50,8 @@ const page: React.FC<pageProps> = ({}) => {
             <hr />
           </div>
           <ul>
-            <Line />
+            {/* map over each device */}
+            <Line id="x4d" />
           </ul>
         </div>
       </div>

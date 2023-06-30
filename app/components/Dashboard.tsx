@@ -12,7 +12,7 @@ interface DashboardProps {
 const Dashboard: React.FC<DashboardProps> = ({ children }) => {
 	// get the current path
 	const path = usePathname().split("/");
-	const param = path[path.length - 1];
+	const param = path[2] || "dashboard";
 	const capitalizedParam = param.charAt(0).toUpperCase() + param.slice(1);
 
 	return (
@@ -88,7 +88,7 @@ const Dashboard: React.FC<DashboardProps> = ({ children }) => {
 				</div>
 
 				{/* page content */}
-				<div className="flex-1 rounded-md content-shadow bg-[#00000014]">{children}</div>
+				<div className="flex-1 rounded-md content-shadow bg-[#00000014] relative">{children}</div>
 			</div>
 		</main>
 	);

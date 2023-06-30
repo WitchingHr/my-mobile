@@ -51,4 +51,8 @@
     opacity: 1;
     transform: translateX(8px) rotate(315deg);
   }
+
+  .modal-gradient {
+    background: linear-gradient(90deg, rgba(254, 254, 254, 0), #5146e58d);
+  }
 }

@@ -16,7 +16,7 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
 
   return (
     <div className="relative">
-      <div className="relative z-20 flex items-center justify-between p-2 bg-white nav-shadow">
+      <div className="relative z-30 flex items-center justify-between p-2 bg-white nav-shadow">
         {/* logo */}
         <Link href="/dashboard" className="flex items-center">
           <RiCellphoneFill size={36} className="text-indigo-600" />
