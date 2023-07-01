@@ -7,7 +7,8 @@ interface ModalProps {
 	title: string;
 	description: string;
 	body: React.ReactNode;
-	footer: React.ReactNode;
+  label: string;
+  action: () => void;
 	isOpen: boolean;
   onClose: () => void;
 }
@@ -16,7 +17,8 @@ const Modal: React.FC<ModalProps> = ({
 	title,
 	description,
 	body,
-	footer,
+  label,
+  action,
 	isOpen,
   onClose,
 }) => {
@@ -41,7 +43,7 @@ const Modal: React.FC<ModalProps> = ({
 
 	return (
 		<div className="absolute top-0 z-10 w-full h-full p-2">
-			<div className="relative h-full overflow-hidden border rounded-md modal-gradient border-slate-400 card-shadow">
+			<div className="relative h-full overflow-hidden border rounded-md modal-gradient bg-black/30 border-slate-400 card-shadow">
         <div
           className={`flex flex-col gap-4 h-full p-3 bg-white duration-300
                   ${
@@ -63,7 +65,10 @@ const Modal: React.FC<ModalProps> = ({
             <hr />
           </div>
           {body}
-          <div className="mt-auto">{footer}</div>
+          <div className="flex gap-2 mt-auto">
+            <button className="ml-auto p-2 max-w-[100px] flex-1 border border-neutral-300 rounded-bl-md" onClick={animateOut}>Cancel</button>
+            <button className="p-2 max-w-[100px] flex-1 text-white bg-indigo-600 rounded-br-md" onClick={action}>{label}</button>
+          </div>
         </div>
       </div>
 		</div>
