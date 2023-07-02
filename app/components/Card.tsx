@@ -1,9 +1,10 @@
 "use client"
 
+import Link from "next/link";
+import { HTMLAttributes } from "react";
 import { cn } from "@/lib/util";
 import { VariantProps, cva } from "class-variance-authority";
-import Link from "next/link";
-import React, { HTMLAttributes } from "react";
+import { IconType } from "react-icons";
 
 const cardVariants = cva(
   // base class
@@ -29,6 +30,7 @@ export interface CardProps extends
     title: string;
     subtitle?: string;
     href?: string;
+    icon?: IconType;
   }
 
 const Card: React.FC<CardProps> = ({
@@ -37,6 +39,7 @@ const Card: React.FC<CardProps> = ({
   title,
   subtitle,
   href,
+  icon: Icon,
   children,
   ...props
 }) => {
@@ -47,7 +50,13 @@ const Card: React.FC<CardProps> = ({
     >
       <div className="p-4 card-shadow-inner">
         <div className="flex items-center justify-between pb-1">
-          <h2 className="text-lg font-medium">{title}</h2>
+          <div className="flex items-center gap-2">
+            {/* icon */}
+            {Icon && (
+              <Icon className="text-indigo-600 w-7 h-7" />
+            )}
+            <h2 className="text-lg font-medium">{title}</h2>
+          </div>
           {subtitle && href && (
             <Link href={href} className="text-sm font-light hover:underline">{subtitle}</Link>
           )}

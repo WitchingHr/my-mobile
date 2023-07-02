@@ -2,6 +2,8 @@
 
 import { ImPriceTag } from "react-icons/im";
 
+import ArrowButton from "@/app/components/ArrowButton";
+
 interface planProps {
   title: string;
   price: number;
@@ -55,9 +57,7 @@ const Plan: React.FC<planProps> = ({
           ))}
         </ul>
         {/* select plan button */}
-        <button className="flex items-center justify-center w-full h-12 mt-auto text-white duration-300 bg-indigo-600 group plan-button rounded-b-md hover:bg-indigo-800">
-          <div className="duration-300 group-hover:-translate-x-2">Select phone plan</div>
-        </button>
+        <ArrowButton className="rounded-b-md" label="Select phone plan" />
       </div>
     </div>
   );

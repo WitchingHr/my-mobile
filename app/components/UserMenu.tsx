@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import Avatar from "./Avatar";
-import { VscSignOut } from "react-icons/vsc";
 import { Dispatch, SetStateAction, useEffect, useRef } from "react";
+
+import { VscSignOut } from "react-icons/vsc";
+
+import Avatar from "./Avatar";
 
 interface UserMenuProps {
 	menuOpen: boolean;
@@ -19,9 +21,8 @@ const UserMenu: React.FC<UserMenuProps> = ({ menuOpen, setMenuOpen }) => {
       }
     };
   
+    // event listener for clicks outside of the menu
     document.addEventListener("click", closeMenu);
-  
-    // return a cleanup function that gets called on unmount
     return () => {
       document.removeEventListener("click", closeMenu);
     };

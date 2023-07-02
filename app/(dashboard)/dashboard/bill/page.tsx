@@ -1,11 +1,8 @@
-"use client"
+import BillClient from "./BillClient";
 
-interface pageProps {}
-
-const page: React.FC<pageProps> = ({}) => {
+const page = ({}) => {
   return (
-    <>
-    </>
+    <BillClient />
   );
 };
 

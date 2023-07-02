@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+
 import { HiOutlineDeviceMobile } from "react-icons/hi";
 
 interface LineProps {

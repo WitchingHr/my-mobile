@@ -36,6 +36,11 @@
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   }
 
+  .detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+
   .plan-button::after {
     content: "";
     width: 10px;
@@ -50,5 +55,33 @@
   .plan-button:hover::after {
     opacity: 1;
     transform: translateX(8px) rotate(315deg);
+  }
+
+  .plan-button-secondary::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+    transform: rotate(315deg);
+    transition: 300ms;
+    opacity: 0;
+  }
+
+  .plan-button-secondary:hover::after {
+    opacity: 1;
+    transform: translateX(8px) rotate(315deg);
+  }
+
+  .data-gradient {
+    background: linear-gradient(16deg, rgb(80, 70, 229), rgba(80, 70, 229, 0.26));
+  }
+
+  .sidebar-link-shadow-selected {
+    box-shadow: inset 0 0 5px 0 #0000009e;
+  }
+
+  .sidebar-link-shadow {
+    box-shadow: 0 0 4px 0 #0000009e;
   }
 }

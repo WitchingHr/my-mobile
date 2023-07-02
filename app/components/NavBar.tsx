@@ -1,10 +1,12 @@
 "use client"
 
-import { RiCellphoneFill } from "react-icons/ri";
-import Avatar from "./Avatar";
-import { useState } from "react";
-import UserMenu from "./UserMenu";
 import Link from "next/link";
+import { useState } from "react";
+
+import { RiCellphoneFill } from "react-icons/ri";
+
+import Avatar from "./Avatar";
+import UserMenu from "./UserMenu";
 
 interface NavBarProps {}
 
